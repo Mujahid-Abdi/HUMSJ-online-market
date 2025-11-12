@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shop • HUMSJ Online Market</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="theme-color" content="#1B5E20" />
+    <meta name="color-scheme" content="light dark" />
+    <link
+      rel="icon"
+      href="generated-image (4).png"
+      type="image/png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      href="generated-image (4).png"
+      type="image/png"
+      sizes="192x192"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="generated-image (4).png"
+      sizes="180x180"
+    />
+    <link rel="apple-touch-icon" href="assets/humsj-logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body data-page="shop">
+    <header class="navbar">
+      <div class="container nav-row">
+        <a href="index.html" class="brand"
+          ><img
+            src="generated-image (4).png"
+            alt="HUMSJ Online Market logo"
+            class="brand-logo"
+          />HUMSJ Online Market</a
+        >
+        <nav class="nav-links" id="navLinks">
+          <a href="index.html#home">Home</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#contact">Contact</a>
+          <div class="dropdown">
+            <button class="dropbtn">
+              Shop <i class="fa-solid fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="shop.html?store=sumeya">Sumeya Boutique</a>
+              <a href="shop.html?store=abuzar"
+                >Abuzar Stationery & Electronics</a
+              >
+              <a href="shop.html?store=rcc">RCC Mini Market</a>
+            </div>
+          </div>
+          <a id="adminLink" href="#">Admin</a>
+          <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+        </nav>
+        <button
+          class="icon-btn menu-toggle"
+          id="menuToggle"
+          aria-label="Open menu"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1 id="shopTitle" class="section-title">Shop</h1>
+          <p>
+            Browse products and place your order for campus delivery. Quantities
+            update as items are sold.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title">Products</h2>
+          <div id="productsGrid" class="grid cols-3"></div>
+        </div>
+      </section>
+
+      <section class="section alt">
+        <div class="container">
+          <h2 class="section-title">Contact Persons</h2>
+          <div id="contactsGrid" class="contact-grid"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="brand-foot">
+          <img
+            src="generated-image (4).png"
+            alt="HUMSJ logo"
+            class="brand-logo"
+          />HUMSJ Online Market
+        </div>
+        <div class="socials">
+          <a
+            href="https://t.me/humsj_market"
+            target="_blank"
+            rel="noopener"
+            aria-label="Telegram"
+            ><i class="fa-brands fa-telegram"></i
+          ></a>
+          <a href="#" aria-label="Facebook"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="#" aria-label="Instagram"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+        </div>
+        <div class="copy">© 2025 HUMSJ Online Market – All Rights Reserved</div>
+      </div>
+    </footer>
+
+    <div class="modal" id="orderModal">
+      <div class="modal-card">
+        <h3 style="margin-top: 0">Complete Order</h3>
+        <form id="orderForm" class="form-grid">
+          <input
+            class="input full"
+            type="text"
+            name="fullname"
+            placeholder="Full name"
+            required
+          />
+          <input
+            class="input"
+            type="tel"
+            name="phone"
+            placeholder="Phone number"
+            required
+          />
+          <input
+            class="input"
+            type="text"
+            name="campus"
+            placeholder="Campus name"
+            required
+          />
+          <input
+            class="input"
+            type="text"
+            name="block"
+            placeholder="Dorm block name"
+            required
+          />
+          <input
+            class="input"
+            type="text"
+            name="room"
+            placeholder="Dorm room number"
+            required
+          />
+          <p
+            id="deliveryNote"
+            class="muted full"
+            style="display: none; margin: 6px 0 0"
+          >
+            Free delivery is only for main campus.
+          </p>
+          <input
+            class="input full"
+            type="file"
+            name="payment"
+            accept="image/*"
+            required
+          />
+          <div
+            class="full"
+            style="display: flex; gap: 10px; justify-content: flex-end"
+          >
+            <button type="button" id="closeOrder" class="btn btn-outline">
+              Cancel
+            </button>
+            <button type="submit" class="btn btn-primary">Confirm Order</button>
+          </div>
+        </form>
+        <div
+          id="orderSuccess"
+          style="display: none; margin-top: 10px"
+          class="badge"
+        ></div>
+      </div>
+    </div>
+
+    <script src="assets/app.js"></script>
+  </body>
+</html>

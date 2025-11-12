@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HUMSJ Online Market</title>
+    <meta
+      name="description"
+      content="HUMSJ Online Market – Shop easily and support the Jema'a. Sumeya Boutique, Abuzar Stationery & Electronics, RCC Mini Market."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="theme-color" content="#1B5E20" />
+    <meta name="color-scheme" content="light dark" />
+    <meta property="og:title" content="HUMSJ Online Market" />
+    <meta
+      property="og:description"
+      content="Shop easily, support the Jema'a. Sumeya Boutique, Abuzar Stationery & Electronics, RCC Mini Market."
+    />
+    <meta property="og:image" content="generated-image (4).png" />
+    <link
+      rel="icon"
+      href="generated-image (4).png"
+      type="image/png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      href="generated-image (4).png"
+      type="image/png"
+      sizes="192x192"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="generated-image (4).png"
+      sizes="180x180"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body data-page="home">
+    <header class="navbar">
+      <div class="container nav-row">
+        <a href="index.html" class="brand"
+          ><img
+            src="generated-image (4).png"
+            alt="HUMSJ Online Market logo"
+            class="brand-logo"
+          />HUMSJ Online Market</a
+        >
+        <nav class="nav-links" id="navLinks">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <div class="dropdown">
+            <button class="dropbtn">
+              Shop <i class="fa-solid fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content" id="shopDropdown">
+              <a href="shop.html?store=sumeya">Sumeya Boutique</a>
+              <a href="shop.html?store=abuzar"
+                >Abuzar Stationery & Electronics</a
+              >
+              <a href="shop.html?store=rcc">RCC Mini Market</a>
+            </div>
+          </div>
+          <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+        </nav>
+        <button
+          class="icon-btn menu-toggle"
+          id="menuToggle"
+          aria-label="Open menu"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="container hero-inner">
+          <div class="hero-content">
+            <h1>Welcome to <span>HUMSJ Online Market</span></h1>
+            <p>
+              Shop easily, support the Jema'a. Explore three student-run stores
+              with quality products and campus delivery.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="shop.html?store=sumeya"
+                >Shop Sumeya Boutique</a
+              >
+              <a class="btn btn-accent" href="shop.html?store=abuzar"
+                >Shop Abuzar Stationery</a
+              >
+              <a class="btn btn-outline" href="shop.html?store=rcc"
+                >Shop RCC Mini Market</a
+              >
+            </div>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <img src="generated-image (4).png" alt="humsj market logo" width="100%" height="100%" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title">Featured Products</h2>
+          <div id="featuredWrap" class="featured-wrap"></div>
+        </div>
+      </section>
+
+      <section id="about" class="section alt">
+        <div class="container two-col">
+          <div>
+            <h2 class="section-title">About HUMSJ Online Market</h2>
+            <p>
+              HUMSJ Online Market is a student-friendly platform serving
+              Haramaya University Muslim Students' Jema'a. It provides a modern
+              way to browse items, place orders, and support on-campus
+              initiatives.
+            </p>
+            <ul class="list">
+              <li><strong>Three stores</strong> with dedicated admins</li>
+              <li><strong>Dark/Light mode</strong> and mobile-first design</li>
+              <li>
+                <strong>Simple checkout</strong> with campus delivery details
+              </li>
+            </ul>
+          </div>
+          <div class="about-art" aria-hidden="true">
+            <img src="generated-image (4).png" alt="humsj market logo" width="100%" height="100%" />
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container">
+          <h2 class="section-title">Get in Touch</h2>
+          <div class="contact-grid">
+            <div class="contact-card">
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <h3>Email</h3>
+                <a href="mailto:humsj.market@example.com"
+                  >humsj.market@example.com</a
+                >
+              </div>
+            </div>
+            <div class="contact-card">
+              <i class="fa-brands fa-telegram"></i>
+              <div>
+                <h3>Telegram</h3>
+                <a
+                  href="https://t.me/humsj_market"
+                  target="_blank"
+                  rel="noopener"
+                  >@humsj_market</a
+                >
+              </div>
+            </div>
+            <div class="contact-card">
+              <i class="fa-solid fa-phone"></i>
+              <div>
+                <h3>Phone</h3>
+                <a href="tel:+251900000000">+251 90 000 0000</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="brand-foot">
+          <img
+            src="generated-image (4).png"
+            alt="HUMSJ logo"
+            class="brand-logo"
+          />HUMSJ Online Market
+        </div>
+        <div class="socials">
+          <a
+            href="https://t.me/humsj_market"
+            target="_blank"
+            rel="noopener"
+            aria-label="Telegram"
+            ><i class="fa-brands fa-telegram"></i
+          ></a>
+          <a href="#" aria-label="Facebook"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="#" aria-label="Instagram"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+        </div>
+        <div class="copy">© 2025 HUMSJ Online Market – All Rights Reserved</div>
+      </div>
+    </footer>
+
+    <script src="assets/app.js"></script>
+  </body>
+</html>
