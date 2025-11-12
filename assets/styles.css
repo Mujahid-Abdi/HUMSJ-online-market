@@ -88,7 +88,14 @@ a {
   margin-right: 0.4rem;
 }
 
-.brand-logo{height:28px;width:28px;object-fit:contain;border-radius:6px;margin-right:8px;vertical-align:middle}
+.brand-logo {
+  height: 28px;
+  width: 28px;
+  object-fit: contain;
+  border-radius: 6px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
 
 .nav-links {
   display: flex;
@@ -138,9 +145,14 @@ a {
   border-radius: 12px;
   box-shadow: var(--shadow);
   min-width: 260px;
+  max-width: calc(100vw - 32px);
   display: none;
   flex-direction: column;
   overflow: hidden;
+}
+.dropdown-content a {
+  white-space: normal;
+  word-break: break-word;
 }
 .dropdown.open .dropdown-content {
   display: flex;
@@ -489,12 +501,47 @@ a {
     flex-direction: column;
     gap: 8px;
     box-shadow: var(--shadow);
+    max-height: 70vh;
+    overflow-y: auto;
   }
   .nav-links.open {
     display: flex;
   }
   .menu-toggle {
     display: inline-grid;
+  }
+  /* Make dropdown fill panel and wrap long names */
+  .dropdown {
+    width: 100%;
+  }
+  .dropbtn {
+    width: 100%;
+    text-align: left;
+  }
+  .dropdown-content {
+    position: static;
+    right: auto;
+    left: auto;
+    top: auto;
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: none;
+    border-radius: 12px;
+  }
+  .dropdown-content a {
+    white-space: normal;
+    word-break: break-word;
+  }
+  /* Forms: single column */
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  /* Tables: horizontal scroll */
+  .table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
   .featured-wrap,
   .grid.cols-3,

@@ -582,11 +582,14 @@ function renderAdmin(db) {
   const pinName = $("#pinStoreName");
   const pinForm = $("#pinForm");
   const pinError = $("#pinError");
+  const mainEl = document.querySelector("main");
   if (pinName) pinName.textContent = store.name;
   const sessionKey = `humsj_admin_${store.id}`;
   if (sessionStorage.getItem(sessionKey) === "ok") {
     pinModal && pinModal.classList.remove("open");
+    if (mainEl) mainEl.style.display = "";
   } else if (pinModal && pinForm) {
+    if (mainEl) mainEl.style.display = "none";
     pinModal.classList.add("open");
     pinForm.addEventListener("submit", (ev) => {
       ev.preventDefault();
@@ -595,8 +598,18 @@ function renderAdmin(db) {
         sessionStorage.setItem(sessionKey, "ok");
         pinError && (pinError.style.display = "none");
         pinModal.classList.remove("open");
+        if (mainEl) mainEl.style.display = "";
       } else {
         pinError && (pinError.style.display = "block");
+        if (mainEl) mainEl.style.display = "none";
+      }
+    });
+  }
+  // Close PIN modal when clicking outside the card
+  if (pinModal) {
+    pinModal.addEventListener("click", (e) => {
+      if (e.target && e.target.id === "pinModal") {
+        window.location.href = `shop.html?store=${store.id}`;
       }
     });
   }
@@ -655,6 +668,7 @@ function renderAdmin(db) {
       sessionStorage.removeItem(sessionKey);
       changePinModal && changePinModal.classList.remove("open");
       pinModal && pinModal.classList.add("open");
+      if (mainEl) mainEl.style.display = "none";
       if (pinName) pinName.textContent = store.name;
     });
   }
